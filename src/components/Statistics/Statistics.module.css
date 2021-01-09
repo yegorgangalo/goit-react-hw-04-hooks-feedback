@@ -1,0 +1,15 @@
+.title {
+  margin-bottom: 10px;
+}
+
+.statElem:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.statKey {
+  text-transform: capitalize;
+}
+
+.statVal {
+  font-weight: 500;
+}

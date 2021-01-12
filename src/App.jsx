@@ -10,10 +10,22 @@ function App () {
   const [bad, setBad] = useState(0);
 
   const addFeedback = (value) => {
-      if(value==='good'){setGood(prevValue => prevValue+1)}
-      if(value==='neutral'){setNeutral(prevValue => prevValue+1)}
-      if(value==='bad'){setBad(prevValue => prevValue+1)}
+      if(value==='good'){setGood(good+1)}
+      if(value==='neutral'){setNeutral(neutral+1)}
+      if(value==='bad'){setBad(bad+1)}
     }
+
+  // function useAddFeedback(defaultValue) {
+  //   const [state, setState] = useState(defaultValue);
+  //   useEffect(() => {
+  //     setState(state + 1);
+  //   }, [state])
+  //   return [state, setState];
+  // }
+
+  // const  [good, setGood] = useAddFeedback(0);
+  // const [neutral, setNeutral] = useAddFeedback(0);
+  // const [bad, setBad] = useAddFeedback(0);
 
   const countTotalFeedback = () => {
         return good + neutral + bad;

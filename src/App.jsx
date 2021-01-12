@@ -15,18 +15,6 @@ function App () {
       if(value==='bad'){setBad(bad+1)}
     }
 
-  // function useAddFeedback(defaultValue) {
-  //   const [state, setState] = useState(defaultValue);
-  //   useEffect(() => {
-  //     setState(state + 1);
-  //   }, [state])
-  //   return [state, setState];
-  // }
-
-  // const  [good, setGood] = useAddFeedback(0);
-  // const [neutral, setNeutral] = useAddFeedback(0);
-  // const [bad, setBad] = useAddFeedback(0);
-
   const countTotalFeedback = () => {
         return good + neutral + bad;
     }
@@ -38,7 +26,6 @@ function App () {
 
       return (
           <Section title="Please leave Feedback">
-          {/* <FeedbackOptions options={{ 'good': good, 'neutral':neutral, 'bad':bad}} onLeaveFeedback={addFeedback}/> */}
           <FeedbackOptions options={['good', 'neutral', 'bad']} onLeaveFeedback={addFeedback}/>
             {countTotalFeedback() === 0 ?
             <Notification message="No feedback given"/> :
